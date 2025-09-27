@@ -85,15 +85,8 @@ function Header({ units, setUnits, favorites, onFavoriteSelect, onRemoveFavorite
         </a>
       </div>
 
-      {/* photo / no photo toggle outside dropdown */}
-      <div className="photo-toggle">
-        <img
-          className="photo-icon"
-          src={currentIcon}
-          alt={currentAlt}
-          onPointerDown={() => setBgActive((prev) => !prev)}
-        />
-      </div>
+     
+     
 
       {/* Units Dropdown */}
       <nav
@@ -103,6 +96,14 @@ function Header({ units, setUnits, favorites, onFavoriteSelect, onRemoveFavorite
         aria-label="Units selection menu"
       >
         <div className="box-icons">
+           {/* photo / no photo toggle outside dropdown */}
+   
+        <img
+          className="photo-icon"
+          src={currentIcon}
+          alt={currentAlt}
+          onPointerDown={() => setBgActive((prev) => !prev)}
+        /> 
           {/* Theme Switcher */}
           <ThemeToggle />
           {/* Favorites Dropdown */}
