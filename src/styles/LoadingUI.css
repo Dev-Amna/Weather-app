@@ -1,0 +1,118 @@
+/* HERO SKELETON */
+.hero-skeleton {
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: 1.25rem;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-card {
+  width: 100%;
+  height: 200px;
+  background-color: var(--color-surface);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-family: var(--font-body, "DM Sans", sans-serif);
+  gap: 0.8rem;
+}
+
+.loading-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.loading-dots span {
+  width: 10px;
+  height: 10px;
+  background-color:var(--color-text-primary);
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+
+  to {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+.loading-card p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* VARIABLES / STATS */
+.seleton-stat-card {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton-line {
+  width: 10%;
+  height: 1px;
+  margin-top: 16px;
+  background: var(--color-text-primary);
+  border-radius: 6px;
+  display: inline-block;
+
+}
+
+/* DAILY FORECAST */
+.forecast-card-skeleton {
+  padding: 4.33rem 1rem;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+
+/* RIGHT column (hourly) */
+
+.skeleton-hourly {
+  padding: 1.68rem 1rem;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+}
+
+
+h3 {
+  font-weight: 500;
+  font-size: 19px;
+}
+
+.app-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "search search"
+    "current hourly"
+    "stats hourly"
+    "daily hourly";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto auto minmax(0, 1fr);
+    gap: 1.54rem;
+  padding: 2rem;
+
+  min-height: 100vh;
+  font-family: var(--font-body);
+color: inherit;
+
+}
+
+
+
+/* Assign sections to grid areas */
+.header-section {
+  grid-area: header;
+
+}
+
+.current-weather-section,
+.daily-forecast-section,
+.hourly-forecast-section,
+.weather-stats-section {
+  border-radius: 12px;
+
+}
+
+.search-bar-section {
+  grid-area: search;
+
+}
+
+li {
+  list-style: none;
+}
+
+.current-weather-section {
+  grid-area: current;
+}
+
+.weather-stats-section {
+  grid-area: stats;
+}
+
+.daily-forecast-section {
+  grid-area: daily;
+   max-height:fit-content;
+   padding-bottom: 3.90rem;
+}
+.hourly-forecast-section {
+  grid-area: hourly;
+  background: var(--color-surface);
+  max-height: 700px;
+}

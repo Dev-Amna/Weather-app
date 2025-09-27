@@ -1,0 +1,46 @@
+/* ---- Suggestions Dropdown ---- */
+.suggestions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--color-surface);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-radius: 0.6rem;
+  margin-top: 0.6rem;
+  /* z-index: 30; */
+  z-index: var(--z-dropdown);
+  overflow: hidden;
+}
+
+.suggestions-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.2rem 0.2rem;
+  text-align: start;
+}
+
+.suggestions-dropdown li {
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  margin: 4px;
+  border-radius: 10px;
+  transition: background 0.2s;
+  border: 1px solid transparent;
+}
+
+.suggestions-dropdown li:hover,
+.suggestions-dropdown li.active {
+  background:var(--color-surface-alt);
+  border-color: var(--color-border);
+}
+
+/* Clear button inside input */
+.clear-input-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.6rem;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+}

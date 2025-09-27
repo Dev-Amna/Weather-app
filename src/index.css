@@ -1,0 +1,137 @@
+/* ---- Fonts Import ---- */
+
+/* DM Sans */
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+/* Bricolage Grotesque */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("./assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+
+
+
+
+/* Base styles for theme switching */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  margin: 0;
+  color: inherit;
+}
+
+/* ---- CSS Variables ---- */
+
+
+
+
+:root {
+  /* Neutral palette */
+  --neutral-900: hsl(243, 96%, 9%);
+  --neutral-800: hsl(243, 27%, 20%);
+  --neutral-700: hsl(243, 23%, 24%);
+  --neutral-600: rgb(61, 59, 94);
+  --neutral-300: hsl(240, 6%, 70%);
+  --neutral-200: hsl(250, 6%, 84%);
+  --neutral-0: hsl(0, 0%, 100%);
+
+  /* Semantic system */
+  --color-bg: var(--neutral-900);
+  --color-surface: var(--neutral-800);
+  --color-surface-alt: var(--neutral-700);
+  --color-border: var(--neutral-600);
+  --color-text-secondary: var(--neutral-300);
+  --color-placeholder: var(--neutral-200);
+  --color-text-primary: var(--neutral-0);
+  --color-hover: var(--color-border);
+  /* Accent Colors */
+  --orange-500: hsl(28, 100%, 52%);
+  --blue-500: hsl(233, 67%, 56%);
+  --blue-700: hsl(248, 70%, 36%);
+
+  /* Semantic Accent Aliases */
+  --color-primary: var(--blue-500);
+  /* old --primary-blue */
+  --color-accent: var(--orange-500);
+  /* old --primary-orange */
+  --color-accent-strong: var(--blue-700);
+
+
+  /* Typography */
+  --font-body: "DM Sans", sans-serif;
+  --font-heading: "Bricolage Grotesque", sans-serif;
+  --font-size-body: 18px;
+
+  /* z-index system */
+
+  --z-search-progress: 1100;
+
+  --z-base: 1;
+  --z-card: 10;
+  --z-dropdown: 100;
+  --z-modal: 1000;
+}
+
+:root[data-theme="light"] {
+  --neutral-900: hsl(0, 100%, 99%);
+  --neutral-800: hsl(330, 2%, 23%);
+  --neutral-700: hsl(240, 37%, 89%);
+  --neutral-600: hsl(227, 75%, 89%);
+  --neutral--400: hsl(230, 58%, 76%);
+  --neutral-300: hsl(227, 45%, 83%);
+  --neutral-200: hsl(300, 2%, 8%);
+  --neutral-0: hsl(245, 50%, 20%);
+
+
+  --color-bg: var(--neutral-900);
+  --color-surface: var(--neutral-600);
+  --color-surface-alt: var(--neutral-300);
+  --color-border: var(--neutral-700);
+  --color-text-secondary: var(--neutral-800);
+  --color-placeholder: var(--neutral-200);
+  --color-text-primary: var(--neutral-0);
+  --color-hover: var(--neutral--400);
+  /* Accent Colors */
+  --orange-500: hsl(25, 95%, 53%);
+  --color-accent-strong: hsl(233, 67%, 56%);
+  --blue-500: hsl(248, 70%, 36%);
+  --purple-400: hwb(255 85% 1%);
+
+  /* Semantic Accent Aliases */
+  --color-primary: var(--blue-500);
+  --color-accent: var(--orange-500);
+  --color-accent-alt: var(--purple-400);
+}

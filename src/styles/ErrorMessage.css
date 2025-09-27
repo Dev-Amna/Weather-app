@@ -1,0 +1,65 @@
+.error-container {
+  grid-column: 1 / -1; 
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  min-height: 70vh; 
+}
+
+.error-message {
+  max-width: 400px;
+  text-align: center;
+  font-family: var(--font-body);
+}
+.not-found-msg{
+  align-items: start ;
+  text-align: center;
+}
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.error-icon img {
+  width: 48px;
+  height: 48px;
+  opacity: 0.8;
+}
+
+.error-message h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-heading);
+  color: inherit;
+}
+
+.error-message p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-body);
+}
+
+.retry-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--color-surface);
+ font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-body);
+color: inherit;
+}
+
+.retry-btn:hover {
+  background-color:var(--color-surface-alt);
+}

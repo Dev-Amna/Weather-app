@@ -1,0 +1,171 @@
+/* ---- Hourly Forecast ---- */
+.hourly-forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: 100%;
+  padding: 1.33rem;
+  color: inherit;
+}
+
+.hourly-forecast-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hourly-list {
+  overflow-y: auto;
+  min-height: 0;
+  max-height: 100%;
+  padding: 0;
+  margin-inline: -22px;
+  padding-inline: 22px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) var(--color-surface);
+
+}
+
+.hourly-list::-webkit-scrollbar {
+  width: 4px !important;
+}
+
+.hourly-list::-webkit-scrollbar-track {
+  background: var(--color-surface);
+  border-radius: 8px;
+}
+
+.hourly-list::-webkit-scrollbar-thumb {
+  background-color: var(--color-surface-alt);
+  border-radius: 8px;
+  border: 2px solid var(--color-bg);
+}
+
+.hourly-list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary);
+}
+
+.hour-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-surface-alt) !important;
+  padding: 0.2rem 0.8rem;
+  border-radius: 8px;
+  margin: 14px 0;
+  border: 1px solid var(--color-border);
+}
+
+.hourly-icons {
+  display: flex;
+  align-items: center;
+}
+
+.hourly-icons .weather-icon {
+  width: 35px;
+  height: 35px;
+  margin: 0.5rem 0.2rem 0.5rem auto;
+}
+
+.hour-card span {
+  font-size: 1rem;
+  color: inherit;
+}
+
+/* ---- Default Select ---- */
+.day-dropdown select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s ease;
+  background-color: var(--color-border);
+}
+
+.day-dropdown select:hover {
+  background-color: var(--color-surface-alt);
+}
+
+.day-dropdown select:focus {
+  border-color:var(--color-primary);
+
+}
+
+/* ---- Custom Day Dropdown ---- */
+.day-dropdown {
+  position: relative;
+}
+
+.day-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  background-color:var(--color-border);
+  color: inherit;
+  border: 1px solid var(--color-surface-alt);
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s;
+
+}
+
+
+/*  Dropdown Menu */
+.day-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  width: 180px;
+  /* z-index: 20; */
+  z-index: var(--z-dropdown);
+  padding: 0.4rem;
+}
+
+.day-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 0.6rem 1rem;
+
+  color: inherit;
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 6px;
+
+}
+
+.day-option:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.day-option:hover,
+.day-option.active {
+  background:var(--color-surface-alt);
+}
+
+/* Icon  */
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.open {
+  transform: rotate(180deg);
+}

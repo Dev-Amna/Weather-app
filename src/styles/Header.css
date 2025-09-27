@@ -1,0 +1,146 @@
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  z-index: var(--z-base);
+}
+.units-dropdown{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.dropdown-section h5 {
+  margin-bottom: 0.4rem;
+  padding: 0.4rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.dropdown-section h5:hover {
+  background-color: var(--color-surface-alt);
+  cursor: pointer;
+}
+
+/* Custom Dropdown  */
+.units-dropdown {
+  position: relative;
+}
+
+.units-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-surface);
+  color: inherit;
+  border: 1px solid var(--color-surface-alt);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 18px;
+}
+.units-btn:hover {
+  background: var(--color-surface-alt);
+
+}
+
+/* Dropdown Panel */
+.dropdown-menu {
+  position: absolute;
+  top: 130%;
+  right: 0;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 9px;
+  width: 220px;
+  z-index: var(--z-dropdown);
+  width: 13.5rem;
+  z-index: 9999;
+}
+
+/* Sections */
+.dropdown-section {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+.dropdown-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gray);
+  margin-bottom: 0.3rem;
+  margin-left: 0.4rem;
+}
+
+/* Buttons inside dropdown */
+.dropdown-section button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  color: inherit;
+  /* color: var(--white); */
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.dropdown-section button:hover {
+  background: var(--color-surface-alt);
+}
+
+
+.unit-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-section button.active {
+  background-color: var(--color-surface-alt);
+  font-weight: 600;
+}
+
+.dropdown-section button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.check-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.dropdown-section:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.box-icons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+gap: 1rem;
+  /* background-color: red; */
+}

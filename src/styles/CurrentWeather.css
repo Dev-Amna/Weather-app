@@ -1,0 +1,78 @@
+.current-weather-section {
+  display: flex;
+  align-items: center;
+  min-height: 280px;
+  background: url("../assets/images/bg-today-large.svg") no-repeat bottom/cover;
+  background-blend-mode: screen;
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+}
+
+.current-weather-section.light {
+  background-color: #4338ca;
+  /* bg-indigo-700 */
+}
+
+.current-weather-section.dark {
+  background-color: #1d4ed8;
+  /* bg-blue-700 */
+  background-blend-mode: normal;
+}
+
+.current-weather {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: var(--z-base);
+}
+
+.current-weather .favorite-btn {
+  background-color: inherit;
+/* 
+  background-color: #6550dd; */
+  border: none;
+  cursor: pointer;
+  display: block;
+  padding: 0.33rem 0.7rem;
+  margin-top: 0.73rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.favorite-btn img{
+  height: 35px !important;
+  width: 30px;
+
+}
+
+.current-weather .current-weather-icon {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.current-weather h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  color: white !important;
+}
+
+.current-date {
+  margin: 1rem 0;
+  color: white !important;
+}
+
+.current-temp {
+  font-size: 3.55rem;
+  font-weight: 500;
+  color: white;
+}
+
+.current-weather img {
+  width: 80px;
+  height: 80px;
+}
