@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "../styles/Favorites.css";
 import "../styles/Tooltip.css"; 
 
-import likeIcon from "../assets/images/all-like-icon.svg";
+import likeIcon from "../assets/images/heart-icon.svg";
 import removeIcon from "../assets/images/remove.svg";
 import { toast } from "react-toastify";
 
@@ -34,21 +34,21 @@ function FavoritesDropdown({ favorites, onFavoriteSelect, onRemoveFavorite }) {
           aria-expanded={open}
         >
           <img src={likeIcon} alt="like icons" />
-           Favorites
+           
         </button>
    
        
         {/* Tooltip text is hidden if dropdown is open */}
         {!open && (
           <span className="tooltip-text">
-            saved locations
+            Favorites locations
           </span>
         )}
       </div>
       {open && (
         <div className="favorites-dropdown">
           {favorites.length === 0 ? (
-            <p className="no-favorites">No favorites yet</p>
+            <p className="no-favorites">Empty </p>
           ) : (
             <ul className="favorites-list">
               {favorites.map((fav) => (
