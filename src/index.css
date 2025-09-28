@@ -110,9 +110,9 @@ h6 {
   --neutral-900: hsl(0, 100%, 99%);
   --neutral-800: hsl(330, 2%, 23%);
   --neutral-700: hsl(240, 37%, 89%);
-  --neutral-600: hsl(227, 75%, 89%);
-  --neutral--400: hsl(230, 58%, 76%);
-  --neutral-300: hsl(227, 45%, 83%);
+  --neutral-600: hsl(345, 100%, 96%);
+  --neutral--400: hsl(0, 0%, 82%);
+  --neutral-300: hsla(267, 75%, 89%, 0.826);
   --neutral-200: hsl(300, 2%, 8%);
   --neutral-0: hsl(245, 50%, 20%);
 
