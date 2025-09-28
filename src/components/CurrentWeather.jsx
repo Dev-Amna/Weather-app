@@ -48,6 +48,10 @@ const CurrentWeather = ({ data, units = {}, onAddFavorite, onRemoveFavorite, fav
         <time className="current-date" dateTime={now.toISOString()}>
           {formattedDate}
         </time>
+        
+      </header>
+
+      <figure className="current-weather-icon">
         {onAddFavorite && (
           <button className="favorite-btn"
             onClick={handleToggleFavorite}
@@ -59,10 +63,7 @@ const CurrentWeather = ({ data, units = {}, onAddFavorite, onRemoveFavorite, fav
               alt={isFavorite ? "Added to favorites" : "Add to favorites"}
             />
           </button>
-        )}
-      </header>
-
-      <figure className="current-weather-icon">
+        )} 
         <img src={icon} alt="Weather Icon" />
         <figcaption className="current-temp">{displayTemp}°</figcaption>
       </figure>

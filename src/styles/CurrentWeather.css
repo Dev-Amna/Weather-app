@@ -11,12 +11,12 @@
 
 .current-weather-section.light {
   background-color: #4338ca;
-  /* bg-indigo-700 */
+
 }
 
 .current-weather-section.dark {
   background-color: #1d4ed8;
-  /* bg-blue-700 */
+
   background-blend-mode: normal;
 }
 
@@ -30,8 +30,6 @@
 
 .current-weather .favorite-btn {
   background-color: inherit;
-/* 
-  background-color: #6550dd; */
   border: none;
   cursor: pointer;
   display: block;
@@ -52,7 +50,7 @@
 .current-weather .current-weather-icon {
   display: flex;
   align-items: center;
-  gap: 2rem;
+ 
 }
 
 .current-weather h2 {
