@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useContext } from "react";
 import { ThemeContext } from "../ThemeContext/ThemeContext";
 import "../styles/Header.css";
 import "../styles/Favorites.css";
-
+import "../styles/Tooltip.css"
 // Logos
 import darkThemelogo from "../assets/images/logo.svg";
 import lightThemeLogo from "../assets/light-theme-images/logo.svg";
@@ -85,8 +85,8 @@ function Header({ units, setUnits, favorites, onFavoriteSelect, onRemoveFavorite
         </a>
       </div>
 
-     
-     
+
+
 
       {/* Units Dropdown */}
       <nav
@@ -96,14 +96,17 @@ function Header({ units, setUnits, favorites, onFavoriteSelect, onRemoveFavorite
         aria-label="Units selection menu"
       >
         <div className="box-icons">
-           {/* photo / no photo toggle outside dropdown */}
-   
-        <img
-          className="photo-icon"
-          src={currentIcon}
-          alt={currentAlt}
-          onPointerDown={() => setBgActive((prev) => !prev)}
-        /> 
+          {/* photo / no photo toggle outside dropdown */}
+          <div className="tooltip">
+            <img
+              className="photo-icon"
+              src={currentIcon}
+              alt={currentAlt}
+              onPointerDown={() => setBgActive((prev) => !prev)}
+            />
+            <span className="tooltip-text">toggle image bg</span>
+          </div>
+
           {/* Theme Switcher */}
           <ThemeToggle />
           {/* Favorites Dropdown */}
