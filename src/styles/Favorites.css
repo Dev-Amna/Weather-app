@@ -8,7 +8,7 @@
   height: 30px;
   width: 30px;
 }
-
+/* all is well */
 .favorites-btn {
   background: var(--color-surface);
 
@@ -31,6 +31,7 @@
 .remove-btn img{
   height: 20px !important;
   width: 20px;
+ 
 }
 .favorites-dropdown {
   position: absolute;
@@ -82,4 +83,5 @@
   font-size: 1.1rem;
   cursor: pointer;
   margin-left: 0.5rem;
+  
 }

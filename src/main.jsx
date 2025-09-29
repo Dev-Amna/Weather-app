@@ -13,7 +13,9 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider>
       <App />
-      <ToastContainer position="top-right" autoClose={4000} />
+      <ToastContainer
+
+        position="top-right" autoClose={4000} />
     </ThemeProvider>
   </StrictMode>,
 )

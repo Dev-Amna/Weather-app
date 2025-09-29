@@ -1,6 +1,3 @@
-
-
-
 import { useState, useRef, useEffect } from "react";
 import { toast } from "react-toastify";
 
@@ -9,7 +6,7 @@ export default function useVoiceSearch(setCity) {
   const [micPermission, setMicPermission] = useState("unknown"); // "unknown" | "granted" | "denied" | "prompt"
   const recognitionRef = useRef(null);
 
-  // 🔍 Detect mic permission on mount
+  // 🔍Detect mic permission on mount
   useEffect(() => {
     if (navigator.permissions && navigator.permissions.query) {
       navigator.permissions
@@ -36,7 +33,7 @@ export default function useVoiceSearch(setCity) {
       return;
     }
 
-    // 🛑 Stop if already listening
+    //  Stop if already listening
     if (listening && recognitionRef.current) {
       recognitionRef.current.stop();
       setListening(false);

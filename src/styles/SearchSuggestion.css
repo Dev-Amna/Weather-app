@@ -10,7 +10,7 @@
   margin-top: 0.6rem;
   /* z-index: 30; */
   z-index: var(--z-dropdown);
-  overflow: hidden;
+  /* overflow: auto; */
 }
 
 .suggestions-dropdown ul {
